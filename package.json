@@ -1,0 +1,41 @@
+{
+  "name": "chrome-rpc",
+  "repository": "github:fabiospampinato/chrome-rpc",
+  "description": "A simple RPC mechanism for Chrome extensions.",
+  "license": "MIT",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/backend.js",
+  "types": "./dist/backend.d.ts",
+  "exports": {
+    "backend": "./dist/backend.js",
+    "frontend": "./dist/frontend.js"
+  },
+  "typesVersions": {
+    "*": {
+      "backend": [
+        "./dist/backend.d.ts"
+      ],
+      "frontend": [
+        "./dist/frontend.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "compile:watch": "tsex compile --watch",
+    "prepublishOnly": "tsex prepare"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "rpc",
+    "simple"
+  ],
+  "devDependencies": {
+    "@types/chrome": "^0.0.328",
+    "tsex": "^4.0.2",
+    "typescript": "^5.8.3"
+  }
+}
