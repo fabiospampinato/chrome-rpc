@@ -6,9 +6,9 @@ import type {Procedures, ProceduresNames, ProceduresProxied, ProcedureFunction, 
 
 /* MAIN */
 
-const frontend = <T extends Procedures> ( options: FrontendOptions ): ProceduresProxied<T> => {
+const frontend = <T extends Procedures> ( options?: FrontendOptions ): ProceduresProxied<T> => {
 
-  const channel = options.channel ?? 'default';
+  const channel = options?.channel ?? 'default';
 
   return new Proxy ( {} as ProceduresProxied<T>, {
 
