@@ -8,8 +8,8 @@
   "main": "dist/backend.js",
   "types": "./dist/backend.d.ts",
   "exports": {
-    "backend": "./dist/backend.js",
-    "frontend": "./dist/frontend.js"
+    "./backend": "./dist/backend.js",
+    "./frontend": "./dist/frontend.js"
   },
   "typesVersions": {
     "*": {
