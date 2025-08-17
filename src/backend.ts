@@ -28,7 +28,7 @@ const backend = <T extends Procedures> ( options: BackendOptions<T> ): void => {
 
         } catch ( err: unknown ) {
 
-          const error = new Error ( `Failed to call method "${type}":\n\n${String ( err )}` );
+          const error = `Failed to call method "${type}":\n\n${String ( err )}`;
           sendResponse ({ error });
 
         }
@@ -38,7 +38,7 @@ const backend = <T extends Procedures> ( options: BackendOptions<T> ): void => {
 
     } else {
 
-      const error = new Error ( `Method "${type}" not found` );
+      const error = `Method "${type}" not found`;
       sendResponse ({ error });
 
     }

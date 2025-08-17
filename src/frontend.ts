@@ -19,13 +19,13 @@ const frontend = <T extends Procedures> ( options?: FrontendOptions ): Procedure
         const request = { type: procedure, args, chrome_rpc_channel: channel };
         const response = await chrome.runtime.sendMessage ( request );
 
-        if ( 'value' in response ) {
+        if ( 'error' in response ) {
 
-          return response.value;
+          throw new Error ( response.error );
 
         } else {
 
-          throw response.error;
+          return response.value;
 
         }
 
