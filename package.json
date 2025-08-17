@@ -3,7 +3,7 @@
   "repository": "github:fabiospampinato/chrome-rpc",
   "description": "A simple RPC mechanism for Chrome extensions.",
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "main": "dist/backend.js",
   "types": "./dist/backend.d.ts",
